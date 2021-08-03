@@ -1,4 +1,10 @@
-package com.company;
+package com.company.classwork6;
+
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Car {
 	private String model;
@@ -22,7 +28,8 @@ public class Car {
 	}
 	public void setAge( int age)
 	{
-		this.age = age >= 2011 && age<=2021? age: -1;
+
+		this.age = age >= 2011 && age<= LocalDate.now().getYear() ? age: -1;
 	}
 	public  int getAge()
 	{
